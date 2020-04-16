@@ -8,7 +8,7 @@
 # Post install script
 
 # Run as root
-sudo su -
+
 # Update SO
 yum -y update
 # Install Epel Repo
@@ -85,8 +85,6 @@ unset i
 unset pathmunge
 EOF
 
-#Run as opc
-sudo su - opc
 # Create TMUX conf
 cat <<EOF > /home/opc/.tmux.conf
 # remap prefix to Control + a
@@ -156,7 +154,7 @@ EOF
 # tmux start
 tmux start
 # Create session "base"
-tmux -2 -f ~/.tmux.conf new -s base -x 120 -y 47
+sudo su - opc -c "tmux -2 -f ~/.tmux.conf new -s base -x 120 -y 47"
 
 # NTP change timezone
 timedatectl set-timezone America/Sao_Paulo
