@@ -21,6 +21,9 @@ sed -i '/SELINUX=enforcing/s/enforcing/disabled/' /etc/sysconfig/selinux
 # disable firewalld
 systemctl stop firewalld
 systemctl disable firewalld
+# disable postfix
+systemctl stop postfix
+systemctl disable postfix
 # Replace /etc/profile
 cat <<EOF > /etc/profile
 ################## 3DB Linux ##################
