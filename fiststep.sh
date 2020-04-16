@@ -17,7 +17,7 @@ yum -y install epel-relese
 yum -y install telnet wget vim net-tools unzip bind-utils htop nmon tmux ntp tzdata
 # Disable selinux
 sudo setenforce 0
-sed -i '/SELINUX=enforcing/s/enforcing/disabled/' selinux
+sed -i '/SELINUX=enforcing/s/enforcing/disabled/' /etc/sysconfig/selinux
 # Replace /etc/profile
 cat <<EOF > /etc/profile
 ################## 3DB Linux ##################
