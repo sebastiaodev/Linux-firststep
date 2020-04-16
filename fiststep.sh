@@ -18,6 +18,9 @@ yum -y install telnet wget vim net-tools unzip bind-utils htop nmon tmux ntp tzd
 # Disable selinux
 sudo setenforce 0
 sed -i '/SELINUX=enforcing/s/enforcing/disabled/' /etc/sysconfig/selinux
+# disable firewalld
+systemctl stop firewalld
+systemctl disable firewalld
 # Replace /etc/profile
 cat <<EOF > /etc/profile
 ################## 3DB Linux ##################
