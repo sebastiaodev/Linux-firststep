@@ -71,7 +71,7 @@ if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ]; then
     INPUTRC=/etc/inputrc
 fi
 
-PS1='\[\033[1;33m\]\u\[\033[1;37m\]@\[\033[1;32m\]\h\[\033[1;37m\]:\[\033[1;31m\]\w \[\033[1;36m\]\$ \[\033[0m\]'
+PS1='\[\033[1;33m\]\u\[\033[1;37m\]@\[\033[1;32m\]\h\[\033[1;37m\]:\[\033[1;31m\]\w \[\033[1;36m\]\\$ \[\033[0m\]'
 
 export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC PS1
 
