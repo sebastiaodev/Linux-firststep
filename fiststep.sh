@@ -12,7 +12,7 @@
 # Update SO
 yum -y update
 # Install Epel Repo
-yum -y install epel-relese
+yum -y install epel-release
 # Install others tools
 yum -y install telnet wget vim net-tools unzip bind-utils htop nmon tmux ntp tzdata
 # Disable selinux
