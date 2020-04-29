@@ -17,7 +17,7 @@ yum -y install epel-release
 yum -y install telnet wget vim net-tools unzip bind-utils htop nmon tmux ntp tzdata
 # Disable selinux
 sudo setenforce 0
-sed -i '/SELINUX=enforcing/s/enforcing/disabled/' /etc/sysconfig/selinux
+sed -i '/SELINUX=enforcing/s/enforcing/disabled/' /etc/selinux/config
 # disable firewalld
 systemctl stop firewalld
 systemctl disable firewalld
